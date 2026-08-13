@@ -1,0 +1,98 @@
+#  MAX-Heap Sort
+import time
+import heapq
+
+# User Input
+n = int(input("Enter the number of elements: "))
+arr = []
+
+print("Enter the elements:")
+for i in range(n):
+    arr.append(int(input(f"Element {i+1}: ")))
+
+# Measure Execution Time
+start = time.perf_counter()
+
+# Convert elements to negative for Max Heap
+max_heap = [-x for x in arr]
+heapq.heapify(max_heap)
+
+sorted_arr = []
+while max_heap:
+    sorted_arr.append(-heapq.heappop(max_heap))
+
+end = time.perf_counter()
+
+# Display Result
+print("\nSorted Array (Descending Order):")
+print(sorted_arr)
+
+print("Execution Time:", end - start, "seconds")
+
+# Time Complexity
+print("\nTime Complexity:")
+print("Best Case    : O(n log n)")
+print("Average Case : O(n log n)")
+print("Worst Case   : O(n log n)")
+Enter the number of elements: 3
+Enter the elements:
+Element 1: 1
+Element 2: 5
+Element 3: 3
+
+Sorted Array (Descending Order):
+[5, 3, 1]
+Execution Time: 0.0005014209999671948 seconds
+
+Time Complexity:
+Best Case    : O(n log n)
+Average Case : O(n log n)
+Worst Case   : O(n log n)
+# MIN-Heap Sort
+import time
+import heapq
+
+# User Input
+n = int(input("Enter the number of elements: "))
+arr = []
+
+print("Enter the elements:")
+for i in range(n):
+    arr.append(int(input(f"Element {i+1}: ")))
+
+# Measure Execution Time
+start = time.perf_counter()
+
+heapq.heapify(arr)  # Convert list into Min Heap
+
+sorted_arr = []
+while arr:
+    sorted_arr.append(heapq.heappop(arr))
+
+end = time.perf_counter()
+
+# Display Result
+print("\nSorted Array (Ascending Order):")
+print(sorted_arr)
+
+print("Execution Time:", end - start, "seconds")
+
+# Time Complexity
+print("\nTime Complexity:")
+print("Best Case    : O(n log n)")
+print("Average Case : O(n log n)")
+print("Worst Case   : O(n log n)")
+Enter the number of elements: 3
+Enter the elements:
+Element 1: 18
+Element 2: 7
+Element 3: 45
+
+Sorted Array (Ascending Order):
+[7, 18, 45]
+Execution Time: 0.00020232900004657495 seconds
+
+Time Complexity:
+Best Case    : O(n log n)
+Average Case : O(n log n)
+Worst Case   : O(n log n)
