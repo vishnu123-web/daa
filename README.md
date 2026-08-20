@@ -26,7 +26,7 @@ Merge Sort and Quick Sort are preferred, whereas Insertion Sort can be useful fo
 The experiment demonstrates the importance of choosing the appropriate sorting algorithm based on the size and nature of the data.
 
 # practical_2
-Summary
+# Summary
 The binary_search() function repeatedly divides the search range into two halves. It compares the target value with the middle element and eliminates the half of the list where the target cannot exist. This process continues until the target is found or the search range becomes empty.
 The program also uses time.perf_counter() to measure and display the execution time of the binary search operation. If the target is found, its index in the sorted list is displayed; otherwise, the program reports that the target was not found.
 Time Complexity:
@@ -34,7 +34,7 @@ Best Case: O(1)
 Average Case: O(log n)
 Worst Case: O(log n)
 Space Complexity: O(1)
-Conclusion
+# Conclusion
 Binary Search is an efficient searching algorithm, especially for large sorted datasets. By eliminating half of the remaining elements after each comparison, it significantly reduces the number of operations required compared with a linear search.
 The program demonstrates that Binary Search has a worst-case time complexity of O(log n) and uses constant extra space, making it highly efficient. However, the list must be sorted before searching. Therefore, Binary Search is most beneficial when the data is already sorted or when the same sorted data will be searched multiple times.
 # practical_3
@@ -50,7 +50,7 @@ The programs also calculate the actual execution time for the sorting operation.
 Heap Sort is an efficient sorting technique that provides a consistent O(n log n) time complexity in the best, average, and worst cases. The Min Heap can be used to sort elements in ascending order, while the Max Heap can be used to sort elements in descending order.
 The programs demonstrate how heaps can be effectively used for sorting and how Python's heapq module simplifies heap operations. Compared with simpler sorting algorithms such as Bubble Sort and Selection Sort, Heap Sort is generally more suitable for larger datasets because its performance remains O(n log n) even in the worst case.
 
-#practical_4
+# practical_4
 # summary
 In the Iterative method, a for loop multiplies all integers from 1 to n to calculate the factorial. In the Recursive method, the function repeatedly calls itself with n-1 until it reaches the base case of 0 or 1.
 For example, when the input is 5, both methods produce the result 120.
