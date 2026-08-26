@@ -64,12 +64,12 @@ The program also compares the execution times of the two approaches.
 Both iterative and recursive methods successfully calculate the factorial of a number and have O(n) time complexity. The iterative approach generally uses less memory because it does not require recursive function calls, giving it an advantage for very large values of n.
 The recursive approach is simpler and demonstrates the concept of recursion, but it requires additional stack memory and may encounter Python's recursion-depth limitation for sufficiently large inputs. Therefore, the iterative method is generally more memory-efficient, while the recursive method is useful for understanding and demonstrating recursive problem-solving.
 
-#Summary
+# practical_7
+# Summary
 The Making Change Problem is solved using Dynamic Programming by breaking the problem into smaller subproblems.
 An array is used to store the minimum number of coins required for each amount.
 Previously calculated results are reused, which makes the algorithm more efficient than repeatedly solving the same subproblems.
-
-#Conclusion
+# Conclusion
 The Making Change Problem demonstrates the importance of Dynamic Programming in solving optimization problems.
 The algorithm successfully finds the minimum number of coins needed to make a given amount.
 It provides an efficient solution with a time complexity of O(amount × number of coins)
