@@ -1,5 +1,5 @@
 # practical_1
-Summary:-
+# Summary:-
 In this experiment, five sorting algorithms were implemented and analyzed: Bubble Sort,
 Selection Sort,
 Insertion Sort, Merge Sort, and Quick Sort.
@@ -16,7 +16,7 @@ Quick Sort selects a pivot element and partitions the array into smaller and lar
 It is generally one of the fastest sorting algorithms in practice.
 The execution time and complexity analysis help compare the efficiency of these sorting techniques for different input sizes.
 
-Conclusion:-
+# Conclusion:-
 From the analysis, it is observed that Bubble Sort, Selection Sort,
 and Insertion Sort are suitable for small datasets but become inefficient as the number of elements increases because of their O(n²) time complexity.
 Merge Sort and Quick Sort perform much better for large datasets with an average time complexity of O(n log n).
@@ -34,10 +34,13 @@ Best Case: O(1)
 Average Case: O(log n)
 Worst Case: O(log n)
 Space Complexity: O(1)
+
 # Conclusion
 Binary Search is an efficient searching algorithm, especially for large sorted datasets. By eliminating half of the remaining elements after each comparison, it significantly reduces the number of operations required compared with a linear search.
 The program demonstrates that Binary Search has a worst-case time complexity of O(log n) and uses constant extra space, making it highly efficient. However, the list must be sorted before searching. Therefore, Binary Search is most beneficial when the data is already sorted or when the same sorted data will be searched multiple times.
+
 # practical_3
+
  # Summary
 In the Max-Heap Sort implementation, the elements are converted to negative values because Python's heapq provides a Min Heap by default. The elements are then repeatedly removed from the heap and converted back to positive values, producing the array in descending order. For example, [1, 5, 3] produces [5, 3, 1].
 In the Min-Heap Sort implementation, the input list is directly converted into a Min Heap using heapq.heapify(). The smallest element is repeatedly removed from the heap, producing the array in ascending order. For example, [18, 7, 45] produces [7, 18, 45].
@@ -46,6 +49,7 @@ Best Case: O(n log n)
 Average Case: O(n log n)
 Worst Case: O(n log n)
 The programs also calculate the actual execution time for the sorting operation.
+
 # Conclusion
 Heap Sort is an efficient sorting technique that provides a consistent O(n log n) time complexity in the best, average, and worst cases. The Min Heap can be used to sort elements in ascending order, while the Max Heap can be used to sort elements in descending order.
 The programs demonstrate how heaps can be effectively used for sorting and how Python's heapq module simplifies heap operations. Compared with simpler sorting algorithms such as Bubble Sort and Selection Sort, Heap Sort is generally more suitable for larger datasets because its performance remains O(n log n) even in the worst case.
@@ -60,6 +64,7 @@ Recursive Time Complexity: O(n)
 Iterative Space Complexity: O(1)
 Recursive Space Complexity: O(n), due to the function call stack
 The program also compares the execution times of the two approaches.
+
  # Conclusion
 Both iterative and recursive methods successfully calculate the factorial of a number and have O(n) time complexity. The iterative approach generally uses less memory because it does not require recursive function calls, giving it an advantage for very large values of n.
 The recursive approach is simpler and demonstrates the concept of recursion, but it requires additional stack memory and may encounter Python's recursion-depth limitation for sufficiently large inputs. Therefore, the iterative method is generally more memory-efficient, while the recursive method is useful for understanding and demonstrating recursive problem-solving.
@@ -69,8 +74,19 @@ The recursive approach is simpler and demonstrates the concept of recursion, but
 The Making Change Problem is solved using Dynamic Programming by breaking the problem into smaller subproblems.
 An array is used to store the minimum number of coins required for each amount.
 Previously calculated results are reused, which makes the algorithm more efficient than repeatedly solving the same subproblems.
+
 # Conclusion
 The Making Change Problem demonstrates the importance of Dynamic Programming in solving optimization problems.
 The algorithm successfully finds the minimum number of coins needed to make a given amount.
 It provides an efficient solution with a time complexity of O(amount × number of coins)
 and can be applied to various real-world problems involving resource allocation and optimization.
+
+# Practical_5
+# Summary
+The 0/1 Knapsack Problem is solved efficiently using Dynamic Programming by dividing the problem into smaller subproblems.
+A two-dimensional DP table is used to store the maximum value possible for different numbers of items and capacities.
+For every item, the algorithm decides whether including or excluding it gives a better result.
+
+# Conclusion
+The implementation of the 0/1 Knapsack Problem using Dynamic Programming successfully finds the maximum possible value without exceeding the knapsack's capacity. Dynamic Programming avoids repeated calculations and provides an efficient solution compared with a simple recursive approach. 
+This method is useful in resource allocation, budget planning, cargo loading, and other optimization problems.
