@@ -1,0 +1,40 @@
+def matrix_chain_multiplication(dimensions):
+    n = len(dimensions) - 1
+
+    # Create DP table
+    dp = [[0 for _ in range(n)] for _ in range(n)]
+
+    # chain_length is the number of matrices in the chain
+    for chain_length in range(2, n + 1):
+
+        for i in range(n - chain_length + 1):
+            j = i + chain_length - 1
+
+            # Initialize with infinity
+            dp[i][j] = float('inf')
+
+            # Try all possible positions for splitting
+            for k in range(i, j):
+
+                cost = (
+                    dp[i][k]
+                    + dp[k + 1][j]
+                    + dimensions[i] * dimensions[k + 1] * dimensions[j + 1]
+                )
+
+                # Store minimum cost
+                if cost < dp[i][j]:
+                    dp[i][j] = cost
+
+    return dp[0][n - 1]
+
+
+# Dimensions of matrices
+dimensions = [10, 70, 40, 50]
+
+# Function call
+minimum_cost = matrix_chain_multiplication(dimensions)
+
+print("Minimum number of multiplications:", minimum_cost)
+
+Minimum number of multiplications: 48000
