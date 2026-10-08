@@ -1,0 +1,64 @@
+from collections import deque
+
+# Graph using adjacency list
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B'],
+    'F': ['C']
+}
+
+# DFS
+def dfs(node, visited):
+    visited.add(node)
+    print(node, end=" ")
+
+    for neighbour in graph[node]:
+        if neighbour not in visited:
+            dfs(neighbour, visited)
+
+
+# BFS
+def bfs(start):
+    visited = set()
+    queue = deque()
+
+    visited.add(start)
+    queue.append(start)
+
+    while queue:
+        node = queue.popleft()
+        print(node, end=" ")
+
+        for neighbour in graph[node]:
+            if neighbour not in visited:
+                visited.add(neighbour)
+                queue.append(neighbour)
+
+
+# Main program
+print("Graph:")
+for node in graph:
+    print(node, "->", graph[node])
+
+print("\nDFS Traversal:")
+visited = set()
+dfs('A', visited)
+
+print("\nBFS Traversal:")
+bfs('A')    
+
+Graph:
+A -> ['B', 'C']
+B -> ['A', 'D', 'E']
+C -> ['A', 'F']
+D -> ['B']
+E -> ['B']
+F -> ['C']
+
+DFS Traversal:
+A B D E C F 
+BFS Traversal:
+A B C D E F 
